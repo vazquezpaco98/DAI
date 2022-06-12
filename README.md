@@ -10,6 +10,6 @@ plantillas HTML a la incorporación de hoijas de estilo o una Base de Datos.
 Las herramientas más importantes usadas en el proyecto han sido.
 
 1. Docker.
-2. Flash.
+2. Flask.
 3. Python.
 4. MySQL.  
