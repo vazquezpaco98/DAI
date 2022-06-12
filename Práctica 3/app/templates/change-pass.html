@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Cambiar contraseña.
+{% endblock %}
+
+{% block body %}
+    <h2>Lista de credenciales.</h2>
+
+    {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+  <form method=post>
+    <dl>
+      <dt>Contraseña antigua:
+      <dd><input type=password name=password>
+        
+        <dt>Contraseña nueva:
+        <dd><input type=password name=password2>
+
+        <dt>Confirmar nueva:
+        <dd><input type=password name=password3>
+    </dl>
+    <p><input type=submit value=Login>
+  </form>
+{% endblock %}

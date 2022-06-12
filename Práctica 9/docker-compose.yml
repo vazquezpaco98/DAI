@@ -1,0 +1,28 @@
+version: "3.3"
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - 80:80
+    volumes:
+      - ./conf:/etc/nginx/conf.d
+      - ./web/static:/var/www/static 
+    depends_on:
+      - web
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  web:
+    build: .
+    restart: always
+    command: gunicorn mi_sitio_web.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./web:/web
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db

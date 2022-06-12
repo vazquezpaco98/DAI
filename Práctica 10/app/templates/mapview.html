@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block body %}
+hola
+{{mymap.html}}
+{{googlemap("simple-map", 37.4419, -122.1419)}}
+{{"decoupled-map"|googlemap_html(37.4419, -122.1419)}}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+  <form action="/insert-movie" method="post">
+        <div class="form-group">
+          <label for="title">Título</label>
+          <input type="text" id="title" name="title"/>
+        </div>
+        <div class="form-group">
+          <label for="length">Longitud</label>
+            <input type="text" id="length" name="length"/>
+        </div>
+        <div class="form-group">
+          <label for="category">Categoría(s)</label>
+          <input type="category" id="category" name="category"/>
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating de edad</label>
+          <input type="rating" id="rating" name="rating"/>
+        </div>
+        <input type="submit" class="btn btn-primary" id="send-edit" name="edit" value="Añadir" />
+  </form>
+ {% endblock %}

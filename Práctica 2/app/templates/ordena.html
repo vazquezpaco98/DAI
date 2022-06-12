@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Ejercicio 2 - Ordena
+{% endblock %}
+
+{% block body %}
+    <h1>Ordenación de arrays.</h1>
+    <p><b>Array original:</b> {{original}}
+       <br><b>Array ordenado con BubbleSort: </b> {{burbuja}}
+       <br><b>Array ordenado con MergeSort: </b> {{mezcla}}
+       <br><b>Array ordenado con InsertionSort: </b> {{insercion}}
+       <br><b>Tiempo empleado con bubble sort: </b> {{tiempo_burbuja}} segundos.
+       <br><b>Tiempo empleado con merge sort: </b> {{tiempo_mezcla}} segundos.
+       <br><b>Tiempo empleado con insertion sort: </b> {{tiempo_insercion}} segundos.
+
+    </p>
+{% endblock %}

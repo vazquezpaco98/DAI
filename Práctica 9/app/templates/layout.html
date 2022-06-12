@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Practica 4</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/"><img src="https://openswad.org/logo/swad1024x1024.png" height=30 width=30 alt=""></a>
+</nav> 
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2">
+      <div class="p-3 mb-2 bg-light text-dark">
+        <li><a href="/nuevo_libro">Añadir Nuevo Libro</a></li>
+        <li><a href="/nuevo_prestamo">Pedir prestamo de Libro</a></li>
+      </div>
+    </div>
+  <div class="col-lg-8">
+      <div class="mx-auto" style="width: 800px;">
+          {% block body %}{% endblock %}
+      </div>
+  </div>
+  </div>
+</div>

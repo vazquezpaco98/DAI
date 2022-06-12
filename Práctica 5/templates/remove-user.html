@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Eliminar usuario del sistema
+{% endblock %}
+
+{% block body %}
+    <h2>Lista de credenciales.</h2>
+    {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+  <form method=post>
+    <dl>
+      <dt>Nombre de usuario a eliminar:
+      <dd><input type=text name=username value="{{
+          request.form.username }}">
+      <dt>Contraseña:
+      <dd><input type=password name=password>
+    </dl>
+    <p><input type=submit value=Login>
+  </form>
+{% endblock %}

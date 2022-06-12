@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Length</th>
+      <th scope="col">Category</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for movie in matriz %}
+      <tr>
+        <th scope="row">{{movie._id}}</th>
+        <td>{{movie.Title}}</td>
+        <td>{{movie.Length}}</td>
+        <td>{{movie.Category}}</td>
+        <td>{{movie.Rating}}</td>
+        <td><a href="/delete-movie/{{movie._id}}" class="btn btn-danger" role="button" aria-pressed="true"><img src="https://image.flaticon.com/icons/png/512/49/49854.png" height=20 width=20 alt=""></a></td>
+        <td><a href="/edit-movie/{{movie._id}}" class="btn btn-warning" role="button" aria-pressed="true"><img src="https://simpleicon.com/wp-content/uploads/pencil.png" height=20 width=20 alt=""></a></td>
+      {% endfor %}
+      </tr>
+  </tbody>
+</table>
+{% endblock %}
